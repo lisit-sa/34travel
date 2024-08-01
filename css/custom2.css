@@ -38,6 +38,7 @@
     background-color: #ffffff;
     z-index: 1000;
     margin: 10px auto 0 auto;
+    display: block;
 }
 
     .b-news__big__faves a,
@@ -45,6 +46,7 @@
         min-height: 17px !important;
         width: 24px;
         height: 24px;
+        background-color: #ffffff;
         display: flex !important;
         justify-content: center;
         align-items: center;
