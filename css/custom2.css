@@ -18,7 +18,97 @@
 
 
 /* ----------------- Header --------------- */
+.header_container {
+    max-width: 1180;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    min-height: 170px;
+}
 
+    .header__projects_wrap,
+    .header__top,
+    .header__links,
+    .header__projects_link,
+    .header_left__section{
+        display: flex;
+    }
+
+    header .logo {
+        margin-top: 0;
+    }
+
+    .header__projects_wrap {
+        gap: 30px;
+        align-items: flex-end;
+        margin-right: 10px;
+    }
+
+        .header__projects_link {
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'DrukCyr', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600;
+            align-items: baseline;
+        }
+
+        .header__projects_link:hover,
+        .header__projects_link:active,
+        .header__links_link:hover,
+        .header__links_link:active {
+            text-decoration: underline;
+        }
+
+        .header__projects_header {
+            font-family: 'DrukCyr', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .header__links {
+            position: relative;
+            padding-left: 30px;
+            align-items: flex-end;
+        }
+
+            .header__links::before {
+                content: '';
+                position: absolute;
+                background-image: url(../img/bookmark.svg);
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 63px;
+                top: -15px;
+                left: -8px;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .header__links_link {
+                font-family: 'DrukCyr', sans-serif;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+    .header__top {
+        gap: 30px;
+    }
+
+
+
+    .header__social_list {
+        display: none;
+    }
+
+    header .search {
+        position: static;
+    }
 .change-lang {
     position: absolute;
     right: 20px;
