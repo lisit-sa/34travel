@@ -186,7 +186,7 @@
     .header_right__section {
         flex-direction: column;
         justify-content: space-between;
-        padding-top: 13px;
+        
         align-items: flex-end;
     }
 
@@ -195,6 +195,14 @@
             align-items: center;
             position: relative;
         }
+        
+        .header__subscription_wrap,
+        .header__account_wrap,
+        .header__search_wrap,
+        .header__lang_wrap {
+            padding-bottom: 10px;
+        }
+        
 
         .header__account_link {
             padding: 10px 20px;
@@ -202,6 +210,34 @@
             align-items: center;
             gap: 5px;
         }
+
+        .header__account_link_white {
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header__account_wrap:hover .header__account_list {
+            display: block;
+            position: absolute;
+        }
+
+                .header__account_list {
+                    padding: 25px 35px 5px;
+                    background: #E2E2E2;
+                    top: 25px;
+                    display: none;
+                }
+
+                    .header__account_item {
+                        margin-bottom: 20px;
+                        display: block;
+                    }
+
+                    .header__account_item:hover,
+                    .header__account_item:active {
+                        text-decoration: underline;
+                    }
+
     .header__right_bottom .header_right_link svg {
         transition: 0.5s linear;
     }
@@ -1505,6 +1541,11 @@ footer {
     .menu-open .header__mobile .inner {
         margin-right: -20px;
     }
+
+    .header__account_list {
+        display: block;
+        background: transparent;
+    }
 }
 
 @media screen and (max-width: 860px) {
@@ -1595,6 +1636,15 @@ footer {
 
     header .search {
         margin-top: -30px;
+    }  
+    
+    .form__popup {
+        padding: 70px 10px !important;
+    }
+
+    .new-select {
+        padding: 0;
+        width: 100%;
     }
 
     .bottom__cookies_text {
