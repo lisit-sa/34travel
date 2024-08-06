@@ -1,4 +1,6 @@
+
 $(document).ready(function() {
+
 	//Подключаем попап на страницах
 	$( ".popup-with-form" ).each(function() {
 		$(this).magnificPopup({
@@ -138,4 +140,19 @@ $(document).ready(function() {
 			focusInvalid: true,
 		});
 	});
+
+	//Устанавливаем куки
+	function cookieSet() {
+		if($.cookie('user_agree')) {
+			$(".bottom__cookies").addClass("closed")
+		}
+
+		$("#bottom__cookies").on("click", function(){
+			$.cookie("user_agree", "Yes", {expires: 72 / 24}); 
+			$(".bottom__cookies").addClass("closed")
+	   })
+	}
+
+	cookieSet();
+	
 });

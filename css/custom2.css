@@ -986,6 +986,14 @@ a, a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.bottom__cookies.closed {
+    display: none;
 }
 
     .bottom__cookies_text {
