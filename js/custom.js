@@ -77,4 +77,65 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+	//Валидация форм
+	$(".form").each(function() {
+		$(this).validate({
+			rules: {
+				email: {
+					required: true,
+					email: true,
+					minlength: 5
+				},
+				pass: {
+					required: true,
+					minlength: 8
+				},
+				old_pass: {
+					required: true,
+					minlength: 8
+				},
+				new_pass: {
+					required: true,
+					minlength: 8
+				},
+				repeat_pass: {
+					required: true,
+					minlength: 8
+				},
+				name: {
+					required: true,
+					minlength: 2
+				}
+			},
+			messages: {
+				email: {
+					required: "Введите Email",
+					minlength: "Поле должно быть более 5-ти символов",
+					email: "Некорректно введен Email"
+				},
+				name: {
+					required: "Введите название",
+					minlength: "Поле должно быть более 2 символов"
+				},
+				pass: {
+					required: "Введите пароль",
+					minlength: "Пароль должно быть более 8 символов",
+				},
+				old_pass: {
+					required: "Введите старый пароль",
+					minlength: "Пароль должно быть более 8 символов",
+				},
+				new_pass: {
+					required: "Введите новый пароль",
+					minlength: "Пароль должно быть более 8 символов"
+				},
+				repeat_pass: {
+					required: "Повторите пароль",
+					minlength: "Пароль должно быть более 8 символов",
+				}
+			},
+			focusInvalid: true,
+		});
+	});
 });
