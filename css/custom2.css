@@ -500,22 +500,26 @@ header {
     position: relative;
 }
 
-
-.post-meta__faves_wrap .wide-box {
-    position: relative;
+.post-meta__faves_wrap {
+    max-width: 60vw;
+    margin: 0 auto;
 }
-    .post-meta__faves {
-        position: absolute !important;
-        width: 43px;
-        height: 43px;
-        border: 1px solid #000000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 20px;
-        left: -40px;
-        cursor: pointer;
+
+    .post-meta__faves_wrap .wide-box {
+        position: relative;
     }
+        .post-meta__faves {
+            position: absolute !important;
+            width: 43px;
+            height: 43px;
+            border: 1px solid #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 20px;
+            left: -40px;
+            cursor: pointer;
+        }
 
         .post-meta__faves:hover path {
             fill: #000;
@@ -1612,13 +1616,6 @@ header {
 
 /* ------------------ Mobile ------------------ */
 
-@media screen and (min-width: 1024px) {
-    .post-meta__faves_wrap {
-        position: relative;
-        max-width: 60vw;
-        margin: 0 auto;    
-    }
-}
 
 @media screen and (max-width: 1240px) {
     .header__desktop_logo {
@@ -1720,6 +1717,10 @@ header {
     .footer__section_second {
         margin-left: 0;
     }
+
+    .post-meta__faves_wrap {
+        max-width: none;
+    }
 }
 
 @media screen and (max-width: 940px) {
@@ -1791,8 +1792,9 @@ header {
         width: 24%;
     }
 
-    .post-meta__faves {
-        left: -60px;
+    .post-meta__faves_wrap {
+        max-width: 80vw;
+        margin: 0 auto;
     }
 
     .bottom__cookies {
@@ -1832,12 +1834,15 @@ header {
         margin-bottom: 20px;
     }
 
+    .post-meta__faves_wrap {
+        max-width: none;
+    }
+
     .post-meta__faves {
         position: static !important;
         margin: 0 auto;
         margin-top: 20px;
     }
-
     
 }
 @media screen and (max-width: 575px) {
