@@ -244,7 +244,7 @@ header {
         .header_in-account .header__account_wrap,
         .header_in-account .header__search_wrap,
         .header_in-account .header__lang_wrap {
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
 
         .header__account_wrap {
@@ -272,6 +272,7 @@ header {
         .header__account_link_white {
             align-items: center;
             gap: 5px;
+            margin-right: 10px;
         }
 
         .header__account_wrap:hover .header__account_list {
@@ -320,8 +321,8 @@ header {
 
     header .search-form {
         right: 0;
-        height: 65px;
-        top: -17px;
+        height: 67px;
+        top: -25px;
     }
 /* ----------------- Header mobile--------------- */
 .menu-open .header__search_wrap {
@@ -754,7 +755,7 @@ header {
 
 /* ------------------ Faves ------------------ */
 .faves__wrap {
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
     .faves__item {
@@ -1656,6 +1657,7 @@ header {
         -ms-transform: none;
         transform: none;
         left: 0;
+        top: 100% !important;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1665,8 +1667,20 @@ header {
         position: static;
     }
 
+    .header__bottom nav li {
+        margin-right: 40px;
+    }
+
+    .header__account_link_white {
+        margin-right: 0;
+    }
+
     .header__top {
         margin-bottom: 30px;
+    }
+
+    .header_in-account .header__right_top {
+        gap: 5px;
     }
 
     .footer__section {
