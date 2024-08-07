@@ -6,21 +6,20 @@ $(document).ready(function() {
 		$(this).magnificPopup({
 			type: 'inline',
 			preloader: false,
-			focus: '#name',
-	
-			// When elemened is focused, some mobile browsers in some cases zoom in
-			// It looks not nice, so we disable it:
-			callbacks: {
-				beforeOpen: function() {
-					if($(window).width() < 700) {
-						this.st.focus = false;
-					} else {
-						this.st.focus = '#name';
-					}
-				}
-			}
 		});
 	  });
+
+	  $( ".popup-with-form_faves" ).each(function() {
+		let href = $(this).data('href');
+
+		$(this).magnificPopup({
+			items: {
+				src: href,
+				type: 'inline'
+			},
+			preloader: false,
+		});
+	});
 	
 
 	//Стилизуем select
