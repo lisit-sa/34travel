@@ -12,6 +12,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'DrukCyrHeavy';
+    src: url("../fonts/DrukCyr-Heavy.woff2") format("woff2"), url("../fonts/DrukCyr-Heavy.woff") format("woff"), url("../fonts/DrukCyr-Heavy.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helioscondregular';
+    src: url("../fonts/helioscond-webfont.woff2") format("woff2"), url("../fonts/helioscond-webfont.woff") format("woff"), url("../fonts/helioscond-webfont.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -30,17 +44,19 @@ a, a:hover {
 }
 
 .post-body h1 {
-    font-family: 'DrukCyr', sans-serif;
+    font-family: 'DrukCyrHeavy', sans-serif;
     font-size: 50px;
     margin-bottom: 36px;
     line-height: 1em;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 /* ----------------- Header --------------- */
 header {
     padding: 0 !important;
+    background-color: #fff !important;
 }
 
 .header_container {
@@ -94,7 +110,7 @@ header {
             }
 
     .header__bottom nav li {
-        margin-right: 45px;
+        margin-right: 35px;
     }
 
     header .logo {
@@ -234,6 +250,16 @@ header {
         align-items: flex-end;
     }
 
+    .header__bottom nav ul li a {
+        border-bottom: 4px solid transparent;
+        font-family: "DrukCyrHeavy", sans-serif !important;
+    }
+
+    .header__bottom nav ul li a:hover,
+    .header__bottom nav ul li a:active {
+        border-bottom: 4px solid #000 !important;
+    }
+
         .header__right_top {
             gap: 20px;
             align-items: center;
@@ -324,6 +350,10 @@ header {
         height: 67px;
         top: -25px;
     }
+
+    header .search .open-search {
+        background: url(../img/search.svg) no-repeat 0 0 / 21px 22px !important; 
+    }
 /* ----------------- Header mobile--------------- */
 .menu-open .header__search_wrap {
     display: none;
@@ -345,7 +375,7 @@ header {
 }
 
 .menu-open header {
-    background-color: #F3F3F3;
+    background-color: #F3F3F3 !important;
 }
 
 .header__mobile_dark {
@@ -601,7 +631,7 @@ header {
     }
 
         .collections__sort_header {
-            font-family: 'RobotoMono';
+            font-family: 'RobotoMono', sans-serif;
             font-weight: 500;
             font-size: 12px;
             color: #8C8C8C;
@@ -618,7 +648,7 @@ header {
             .collections__sort_item span {
                 color: #8C8C8C;
                 display: inline-block;
-                font-family: 'RobotoMono';
+                font-family: 'RobotoMono', sans-serif;
                 font-weight: 500;
                 font-size: 12px;
                 color: #8C8C8C;
@@ -853,8 +883,8 @@ header {
         }
 
         .faves__item__description {
-            font-family: 'Spectral';
-            font-size: 14px !important;
+            font-family: 'Spectral', sans-serif;
+            font-size: 13px !important;
             font-weight: 400;
             font-style: normal;
             text-align: center;
@@ -934,12 +964,18 @@ header {
 .footer {
     margin-top: 0 !important;
     padding: 50px 0 95px !important;
+    background-color: #e2e2e2 !important;
+    border-top: 1px solid #C3C3C3;
 }
 
 .footer .logo {
     width: 90px !important;
     height: 65px !important;
     background-size: contain;
+    background-image: url(../img/logo_footer.png);
+    background-repeat: no-repeat;
+    max-width: auto !important;
+    min-height: auto !important;
 }
 .footer__container {
     max-width: 830px;
@@ -961,7 +997,7 @@ header {
 
     .footer__section_logo {
         position: absolute;
-        left: -190px;
+        left: -195px;
         top: 0;
     }
 
@@ -977,7 +1013,7 @@ header {
         align-items: center;
         color: #000000;
         margin-bottom: 0;
-        padding-bottom: 18px;
+        padding-bottom: 25px;
     }
 
     .footer__header_big {
@@ -990,7 +1026,7 @@ header {
         }
 
     .footer__menu li {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
         .footer__menu li a {
@@ -1019,8 +1055,9 @@ header {
     .footer__menu_connection_link {
         text-decoration: none;
         display: block;
-        margin-bottom: 13px;
-        font-size: 12px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-family: 'helioscondregular', sans-serif !important;
     }
 
         .footer__menu_connection_link:hover,
@@ -1970,8 +2007,7 @@ header {
         .collections__item img {
             aspect-ratio: 4 / 2.5;
         }
-
-        
+ 
 
     .collections__sort_header {
         width: 100%;
@@ -2082,6 +2118,7 @@ header {
 
     .footer__section_logo .logo {
         margin: 0 auto !important;
+        background-position: center;
     }
 
     .mobile_text-center div,
