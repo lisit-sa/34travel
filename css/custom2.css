@@ -1158,9 +1158,10 @@ header {
 
     .form_header {
         text-align: center;
-        font-family: 'Druk-Text-Cyr-Bold', sans-serif;
-        font-weight: 700;
-        font-size: 26px;
+        font-family: 'DrukCyrHeavy', sans-serif;
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-weight: 800;
         margin-bottom: 30px;
     }
 
@@ -1180,7 +1181,7 @@ header {
 
     .form_short-text,
     .form_short-text span {
-        font-family: 'RobotoMono';
+        font-family: 'RobotoMono', sans-serif;
         font-weight: 600;
         font-size: 12px;
         text-align: center; 
@@ -1206,7 +1207,7 @@ header {
 
     .form_wrap input {
         padding: 15px !important;
-        font-family: 'RobotoMono' !important;
+        font-family: 'RobotoMono', sans-serif !important;
         text-transform: none;
         font-weight: 600;
         font-size: 12px;
@@ -1216,7 +1217,7 @@ header {
     .form_wrap .error {
         display: block;
         color: #DC1515;
-        font-family: 'RobotoMono';
+        font-family: 'RobotoMono', sans-serif;
         font-weight: 600;
         font-size: 12px;
     }
@@ -1291,7 +1292,7 @@ header {
         }
 
         .form_wrap .form_short_btn button {
-            font-family: 'RobotoMono' !important;
+            font-family: 'RobotoMono', sans-serif !important;
             text-transform: none;
             font-weight: 600;
             font-size: 12px;
@@ -1306,7 +1307,7 @@ header {
             align-items: center;
             display: flex;
             text-decoration: none;
-            font-family: 'RobotoMono';
+            font-family: 'RobotoMono', sans-serif;
             font-weight: 600;
             font-size: 12px;
             margin-bottom: 20px;
@@ -1321,7 +1322,7 @@ header {
         }
 
         .form_wrap .autorization_aside_text {
-            font-family: 'RobotoMono';
+            font-family: 'RobotoMono', sans-serif;
             font-weight: 600;
             font-size: 12px;
         }
@@ -1341,12 +1342,13 @@ header {
 
     .form__label_gray {
         color: #A5A5A5;
-        font-family: 'RobotoMono';
+        font-family: 'RobotoMono', sans-serif;
         font-weight: 600;
         font-size: 12px;
     }
 
-    .form__label_black {
+    .form__label_black,
+    .form__label_black span {
         font-family: 'RobotoMono';
         font-weight: 600;
         font-size: 14px;
@@ -1385,7 +1387,7 @@ header {
 }
 
     .form__information {
-        font-family: 'RobotoMono';
+        font-family: 'RobotoMono', sans-serif;
         font-weight: 600;
         font-size: 14px;
         margin-bottom: 45px;
@@ -1398,7 +1400,7 @@ header {
 }
 
 .form_text_line {
-    font-family: 'RobotoMono';
+    font-family: 'RobotoMono', sans-serif;
     font-weight: 600;
     font-size: 16px;
     width: 100%;
@@ -1420,7 +1422,7 @@ header {
 
     .form_error {
         color: #C86F6F;
-        font-family: 'RobotoMono' !important;
+        font-family: 'RobotoMono', sans-serif !important;
         font-weight: 600;
         font-size: 12px !important;
     }
@@ -1456,7 +1458,7 @@ header {
     .form__link_img {
         text-align: left;
         color: #A5A5A5 !important;
-        font-family: 'RobotoMono';
+        font-family: 'RobotoMono', sans-serif;
         font-weight: 600;
         font-size: 12px !important;
         text-decoration: none;
@@ -1492,9 +1494,9 @@ header {
         }
         
         .form_simple_link  {
-            font-family: 'RobotoMono';
+            font-family: 'RobotoMono', sans-serif;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 12px;
         }
 
             .form__link_with-back svg {
@@ -1536,7 +1538,7 @@ header {
                         background-repeat: no-repeat;
                         background-position: right 1.5em top 50%, 0 0;
                         cursor: pointer;
-                        font-family: 'RobotoMono';
+                        font-family: 'RobotoMono', sans-serif;
                         font-weight: 600;
                         font-size: 12px;
                         color: #7F7F7F
@@ -1576,7 +1578,7 @@ header {
                         z-index: 2;
                         background: #fff;
                         user-select: none;
-                        font-family: 'RobotoMono';
+                        font-family: 'RobotoMono', sans-serif;
                         font-weight: 600;
                         font-size: 12px;
                     }
