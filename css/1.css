@@ -503,7 +503,7 @@ header .right-side .special-link a img {
   margin-top: -5px;
 }
 
-header .right-side .search-form {
+header .right-side .search__form {
   display: none;
   position: absolute;
   right: 118px;
@@ -515,15 +515,15 @@ header .right-side .search-form {
   background: #e5e5e5;
 }
 
-.search-visible header .right-side .search-form {
+.search-visible header .right-side .search__form {
   display: block;
 }
 
-header .right-side .search-form .form-wrap {
+header .right-side .search__form .form-wrap {
   position: relative;
 }
 
-header .right-side .search-form input {
+header .right-side .search__form input {
   height: 33px;
   padding: 0 10px;
   background: #fff;
@@ -531,7 +531,7 @@ header .right-side .search-form input {
   border: 1px solid #fff;
 }
 
-header .right-side .search-form button {
+header .right-side .search__form button {
   background: url("../images/loupe.svg") no-repeat 0 0/21px 22px;
   width: 21px;
   height: 21px;
@@ -545,11 +545,11 @@ header .right-side .search-form button {
   transition: all .2s;
 }
 
-.no-touchevents header .right-side .search-form button:hover {
+.no-touchevents header .right-side .search__form button:hover {
   opacity: .5;
 }
 
-header .right-side .search-form button span {
+header .right-side .search__form button span {
   display: none;
 }
 
@@ -560,7 +560,7 @@ header .right-side .search-box {
   margin-right: 40px;
 }
 
-header .right-side .search-box .open-search {
+header .right-side .search-box .open__search {
   background: url("../images/loupe.svg") no-repeat 0 0/21px 22px;
   width: 21px;
   height: 21px;
@@ -571,11 +571,11 @@ header .right-side .search-box .open-search {
   transition: all .2s;
 }
 
-.no-touchevents header .right-side .search-box .open-search:hover {
+.no-touchevents header .right-side .search-box .open__search:hover {
   opacity: .5;
 }
 
-.search-visible header .right-side .search-box .open-search {
+.search-visible header .right-side .search-box .open__search {
   /*@include big-desktop {
             display: inline-block;
             background: #e7e7e7 url("../../i/close.png") no-repeat 50%;
@@ -585,11 +585,11 @@ header .right-side .search-box .open-search {
           }*/
 }
 
-.search-visible header .right-side .search-box .open-search:hover {
+.search-visible header .right-side .search-box .open__search:hover {
   opacity: 1;
 }
 
-.super-top header .right-side .search-box .open-search {
+.super-top header .right-side .search-box .open__search {
   background: url("../images/loupe-white.svg") no-repeat 0 0/21px 22px;
 }
 
@@ -2712,7 +2712,7 @@ footer .logo {
     margin-right: 40px;
   }
 
-  header .right-side .search-form {
+  header .right-side .search__form {
     right: 112px;
   }
 
@@ -2784,7 +2784,7 @@ footer .logo {
 }
 
 @media (max-width: 1023px) {
-  header .right-side .search-box .open-search {
+  header .right-side .search-box .open__search {
     margin-top: 0;
     height: 100%;
     background-position: 50% 50%;
@@ -2939,7 +2939,7 @@ footer .logo {
     display: none;
   }
 
-  header .right-side .search-form {
+  header .right-side .search__form {
     right: 102px;
   }
 
@@ -3401,7 +3401,7 @@ footer .logo {
     display: inline-block;
   }
 
-  header .right-side .search-form {
+  header .right-side .search__form {
     right: -25px;
     top: -16px;
   }
@@ -3551,13 +3551,13 @@ footer .logo {
 }
 
 @media (max-width: 360px) {
-  header .right-side .search-form {
+  header .right-side .search__form {
     width: 290px;
     padding: 15px;
     right: -15px;
   }
 
-  header .right-side .search-form button {
+  header .right-side .search__form button {
     right: 15px;
   }
 

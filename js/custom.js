@@ -153,5 +153,25 @@ $(document).ready(function() {
 	}
 
 	cookieSet();
+
+
+
+	 // Open search
+	 $('.open__search').each(function() {
+		$(this).click(function(){
+			if(!$('html').hasClass('search-visible')) {
+				$('html').addClass('search-visible').removeClass('menu-open').find('.search__form input[type="text"]').focus();
+				$('.user-menu-box').removeClass('visible');
+			}
+			else {
+				$('html').removeClass('search-visible');
+			}
+		});
+	});
+
+	$('.search__form').click(function(e){
+        e.stopPropagation();
+    })
+
 	
 });
