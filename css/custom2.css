@@ -1256,6 +1256,7 @@ header {
         color: #020202;
         border: 1px solid #CACACA;
         transition: background-color .3s .1s;
+        box-sizing: border-box;
     }
 
     .form_wrap input {
