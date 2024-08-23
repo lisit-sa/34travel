@@ -156,7 +156,7 @@ $(document).ready(function() {
 
 
 
-	 // Open search
+	 //Открываем форму поиска
 	 $('.open__search').each(function() {
 		$(this).click(function(){
 			if(!$('html').hasClass('search-visible')) {
@@ -173,5 +173,32 @@ $(document).ready(function() {
         e.stopPropagation();
     })
 
+	//Добавляем желтый бэкграунд для чекбоксов подписки
+
+	$('.subscription__tariffs_check .custom-radio').each(function() {
+		$(this).click(function(){
+			$('.subscription__tariffs_check .custom-radio').each(function() {
+				$('.subscription__tariffs_item').removeClass('active');
+			})
+			$(this).closest('.subscription__tariffs_item').addClass('active');
+		});
+	})
+
+
+	//Открываем скрытый текст в подписках
+	$('.subscription_open-hidden').click(function(){
+		$('.subscription__hidden').toggleClass('open');
+	})
+
+	//Табы для страницы подписок
+
+	$('.tabs__wrapper').each(function() {
+		let ths = $(this);
+		ths.find('.tab__item').not(':first').hide();
+		ths.find('.tab').click(function() {
+			ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+			ths.find('.tab__item').hide().eq($(this).index()).fadeIn()
+		}).eq(0).addClass('active');
+	});
 	
 });
