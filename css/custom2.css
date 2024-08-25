@@ -1761,6 +1761,15 @@ header {
                         color: #7F7F7F
                     }
 
+                    .new-select.empty {
+                        background-image: none;
+                        cursor: default;
+                    }
+
+                    .new-select.empty:hover {
+                        background-color: #fff;
+                    }
+
                     .form__create-collection .new-select {
                         width: 100%;
                     }

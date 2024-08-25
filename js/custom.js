@@ -44,38 +44,46 @@ $(document).ready(function() {
 		}).insertAfter(selectHead);
 
 		const selectList = selectHead.next('.new-select__list');
-		for (let i = 1; i < selectOptionLength; i++) {
-			$('<div>', {
-				class: 'new-select__item',
-				html: $('<span>', {
-					text: selectOption.eq(i).text()
+		if(selectOptionLength > 1) {
+			for (let i = 1; i < selectOptionLength; i++) {
+				$('<div>', {
+					class: 'new-select__item',
+					html: $('<span>', {
+						text: selectOption.eq(i).text()
+					})
 				})
-			})
-			.attr('data-value', selectOption.eq(i).val())
-			.appendTo(selectList);
+				.attr('data-value', selectOption.eq(i).val())
+				.appendTo(selectList);
+			}
+		} else {
+			selectHead.addClass('empty')
 		}
+
 
 		const selectItem = selectList.find('.new-select__item');
 		selectList.slideUp(0);
 		selectHead.on('click', function() {
-			if ( !$(this).hasClass('on') ) {
-				$(this).addClass('on');
-				selectList.slideDown(duration);
-
-				selectItem.on('click', function() {
-					let chooseItem = $(this).data('value');
-
-					$('select').val(chooseItem).attr('selected', 'selected');
-					selectHead.text( $(this).find('span').text() );
-
+			if(!$(this).hasClass('empty')) {
+				if ( !$(this).hasClass('on') ) {
+					$(this).addClass('on');
+					selectList.slideDown(duration);
+	
+					selectItem.on('click', function() {
+						let chooseItem = $(this).data('value');
+	
+						$('select').val(chooseItem).attr('selected', 'selected');
+						selectHead.text( $(this).find('span').text() );
+	
+						selectList.slideUp(duration);
+						selectHead.removeClass('on');
+					});
+	
+				} else {
+					$(this).removeClass('on');
 					selectList.slideUp(duration);
-					selectHead.removeClass('on');
-				});
-
-			} else {
-				$(this).removeClass('on');
-				selectList.slideUp(duration);
+				}
 			}
+			
 		});
 	});
 
