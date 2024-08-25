@@ -58,10 +58,6 @@ body {
     overflow-x: hidden;
 }
 
-a, a:hover {
-    color: #000 !important;
-}
-
 .flex__wrap {
     display: flex;
 }
@@ -84,6 +80,7 @@ a, a:hover {
 
 .post-body h1.no-margin {
     margin-bottom: 30px;
+    padding-top: 30px;
 }
 
 .post-body h1.big-margin {
@@ -558,10 +555,15 @@ header {
     background-color: #ffffff;
     top: 5px;
     right: 5px;
-    display: flex !important;
+    display: none !important;
+    
     justify-content: center;
     align-items: center;
     z-index: 100;
+}
+
+.b-news__short__block:hover .b-news__short__faves {
+    display: flex !important;
 }
 
     .b-news__short__faves .popup-with-form_faves {
@@ -584,6 +586,10 @@ header {
     z-index: 1000;
     margin: 10px auto 0 auto;
     display: block;
+    opacity: 0;
+}
+.b-news__short__block:hover .b-news__big__faves {
+    opacity: 100%;
 }
 
 .b-news__big__faves .popup-with-form_faves {
@@ -763,7 +769,7 @@ header {
         width: 100%;
         min-height: 340px;
         position: relative;
-        
+        height: 100%;
         z-index: 1;
         background: #ffffff;
     }
@@ -815,8 +821,9 @@ header {
                 font-weight: 900;
                 text-transform: uppercase;
                 font-size: 24px !important;
-                line-height: 26px;
+                line-height: 29px;
                 letter-spacing: 0;
+                padding-bottom: 40px;
             }
 
             .collections__item__header svg {
@@ -959,15 +966,15 @@ header {
 
         .faves__item_delete svg {
             margin-right: 5px;
+            margin-top: -1px;
         }
 
             .faves__item_delete div {
                 line-height: 15px;
-                border-bottom: 1px solid transparent;
             }
 
             .faves__item_delete:hover div {
-                border-bottom: 1px solid #000;
+                text-decoration: underline;
             }
 
         
@@ -987,11 +994,13 @@ header {
 
         .one-collection_edit svg {
             display: inline-block;
-            margin-right: 10px;
+            margin-right: 7px;
         }
 
-    .one-collection_edit .collections__sort_item {
+    .one-collection_edit .collections__sort_item,
+    .one-collection_edit .collections__sort_item span {
         margin-right: 0;
+        color: #000000;
     }
 
         .one-collection_edit .collections__sort_item:after {
@@ -1210,7 +1219,7 @@ header {
 }
 
 .form_wrap.form__add_wrap {
-    padding: 30px 0 0 0 ;
+    padding: 50px 0 0 0 ;
 }
 
     .form  {
@@ -1253,7 +1262,7 @@ header {
     }
 
     .form_header_margin_medium {
-        margin-bottom: 40px;
+        margin-bottom: 40px !important;
     }
 
     .form_header_margin_big {
@@ -1326,7 +1335,7 @@ header {
         margin-bottom: 30px;
     }
 
-    .form_section .form__field.form__field_ittle-margin {
+    .form_section .form__field.form__field_margin_little {
             margin-bottom: 20px;
         }
 
@@ -1498,12 +1507,36 @@ header {
         margin-bottom: 50px;
     }
 
+    .form_section_margin_little {
+        margin-bottom: 30px;
+    }
+
+    .form_section_margin_medium {
+        margin-bottom: 40px;
+    }
+
+    .form_section_margin_medium_second {
+        margin-bottom: 65px;
+    }
+
+    .form_section_margin_big {
+        margin-bottom: 80px;
+    }
+
     .form_section__username {
         margin-bottom: 25px;
     }
 
     .form_section_margin {
         margin: 0 0 70px
+    }
+
+    .form_section_text {
+        margin-bottom: 55px;
+    }
+
+    .form__add_wrap .form_section_margin_little + .form_section {
+        margin-bottom: 65px;
     }
 
         .form__username_top {
@@ -1553,6 +1586,11 @@ header {
 .form_text_line_gray {
     color: #A2A2A2;
     font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.form_text_line.form_text_line_gray::after {
+    top: 45px;
 }
 
 .form_text__inline_wrap.form_text_line_big {
@@ -1667,14 +1705,15 @@ header {
 
             .form__link_with-back svg {
                 display: inline-block;
-                margin-right: 5px;
+                margin-right: 9px;
             }
 
             .form__link_with-back span {
                 text-transform: uppercase;
-                font-family: 'Druk-Text-Cyr-Bold', sans-serif !important;
+                font-family: 'DrukCyr', sans-serif !important;
                 font-weight: 700;
-                font-size: 18px;
+                font-size: 19px;
+                letter-spacing:.6px;
                 border-bottom: 1px solid transparent;
             }
 
@@ -1754,7 +1793,7 @@ header {
                     }
 
                     .new-select__item {
-                        height: 40px;
+                        min-height: 40px;
                     }
                     
                     .new-select__item span {
@@ -1833,31 +1872,35 @@ header {
 
 .arrows__wrap {
     display: flex;
-    max-width: 760px;
+    max-width: 690px;
     margin: 0 auto;
-    padding: 40px 0 0;
+    padding: 40px 25px 0px 50px;
     justify-content: space-between;
 }
 
     .arrows_item {
         position: relative;
+        display: flex;
+        align-items: center;
     }
-        .arrows_item:after {
-            content: '';
-            position: absolute;
+        .arrows_line {
+            display: block;
             width: 170px;
             border-bottom: 1px dashed #A0A0A0;
-            top: 11px;
-            left: 95px;
+            margin-top: -25px;
+            margin-left: 12px;
         }
 
-        .arrows_item:last-child::after {
-            display: none;
+        .arrows_item_left {
+            width: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
             .arrows_item svg {
                 display: block;
                 margin: 0 auto;
-                margin-bottom: 5px;
+                margin-bottom: 2px;
             }
 
             .arrows__header {
@@ -1869,10 +1912,11 @@ header {
                 text-align: center;
                 color: #020202;
                 text-transform: uppercase;
+                text-wrap: nowrap;
             }
 .subscription__body {
-    margin-bottom: 70px;
-    padding-bottom: 50px;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
 }
 .rubric__subscription {
     background: #E2E2E2;
@@ -2079,6 +2123,10 @@ header {
         text-align: center;
         color: #000000;
     }
+
+    .subscription__text_margin {
+        padding-bottom: 7px;
+    }
     
     .subscription__text_bold {
         font-family: 'Spectral bold', serif;
@@ -2088,11 +2136,15 @@ header {
         line-height: 20px;
         text-align: center;
         color: #000000;
-        margin-bottom: 25px;
         max-width: 70%;
         margin: 0 auto;
+        margin-bottom: 15px;
     }
-
+    
+    .subscription__text_bold_full {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
 
     .subscription__select .new-select {
         background-color: #F1F1F1 !important;
@@ -2108,26 +2160,31 @@ header {
 
     .new-select__list {
         position: absolute;
-        height: 200px;
-        overflow: scroll;
-        width: calc(100% - 3px);
+        max-height: 200px;
+        overflow-y: scroll;
+        width: 100%;
     }
 
     .subscription__success {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     .form_wrap .form_link.subscription__link {
-        max-width: 90%;
+        max-width: 93% !important;
+        width: 93% !important;
     }
 
     .subscription__success_img {
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 .subscription__hidden {
     position: relative;
     margin-bottom: 50px;
+}
+
+.subscription__hidden.open {
+    margin-bottom: 40px;
 }
 
 .subscription__hidden::after {
@@ -2224,6 +2281,10 @@ header {
         margin-bottom: 65px;
     }
 
+    .subscription__promo_margin_medium {
+        margin-bottom: 90px;
+    }
+
     .subscription__promo_margin {
         margin-bottom: 110px;
     }
@@ -2247,6 +2308,10 @@ header {
 
     .subscription__terms {
         margin-bottom: 70px;
+    }
+
+    .subscription__terms_margin_big {
+        margin-bottom: 85px;
     }
 
         .subscription__terms label,
@@ -2384,11 +2449,11 @@ header {
 
 .subscription__sections {
     display: flex;
-    padding: 0 30px;
+    padding: 10px 40px;
 }
 
     .subscription__section_left {
-        width: 45%;
+        width: 39%;
         border-right: 1px solid #CACACA;
         padding-right: 75px;
     }
@@ -2397,7 +2462,6 @@ header {
         width: 55%;
         padding-left: 50px;
     }
-    
 
     .form__link_gray {
         font-family: 'RobotoMono', sans-serif;
