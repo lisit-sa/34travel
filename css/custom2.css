@@ -637,7 +637,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            top: 20px;
+            bottom: -92px;
             left: -40px;
             cursor: pointer;
         }
@@ -3077,6 +3077,18 @@ header {
             max-width: 20%;
             margin-left: 20px;
             margin-right: 0;
+            display: flex;
+            text-decoration: none;
+        }
+
+        .collections__sort_item:first-child {
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .collections__sort_item:last-child {
+            margin-left: 0;
+            margin-right: 20px;
         }
 
         .collections__sort_item:after {
