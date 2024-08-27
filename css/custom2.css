@@ -2216,6 +2216,18 @@ header {
         max-height: 200px;
         overflow-y: scroll;
         width: 100%;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .new-select__list::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    .new-select span {
+        display: block;
+        max-width: 90%;
     }
 
     .subscription__success {

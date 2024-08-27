@@ -35,10 +35,13 @@ $(document).ready(function() {
 		_this.wrap('<div class="select"></div>');
 		$('<div>', {
 			class: 'new-select',
-			text: _this.children('option:disabled').text()
 		}).insertAfter(_this);
+		$('<span>', {
+			text: _this.children('option:disabled').text()
+		}).appendTo('.new-select');
 
 		const selectHead = _this.next('.new-select');
+		const selectHeadBlock = selectHead.find('span');
 		$('<div>', {
 			class: 'new-select__list'
 		}).insertAfter(selectHead);
@@ -72,7 +75,7 @@ $(document).ready(function() {
 						let chooseItem = $(this).data('value');
 	
 						$('select').val(chooseItem).attr('selected', 'selected');
-						selectHead.text( $(this).find('span').text() );
+						selectHeadBlock.text( $(this).find('span').text() );
 	
 						selectList.slideUp(duration);
 						selectHead.removeClass('on');
