@@ -62,6 +62,19 @@ $(document).ready(function() {
 			selectHead.addClass('empty')
 		}
 
+		const createCollection = $('#form_add_post_view .popup-with-form');
+		createCollection.on('click', function() {
+			const inputVal =  $('#addCollectionInput').val();
+			$('<div>', {
+				class: 'new-select__item',
+				html: $('<span>', {
+					text: inputVal
+				})
+			})
+			.attr('data-value', inputVal)
+			.appendTo(selectList);
+		})
+
 
 		const selectItem = selectList.find('.new-select__item');
 		selectList.slideUp(0);
@@ -88,6 +101,8 @@ $(document).ready(function() {
 			}
 			
 		});
+
+		
 	});
 
 	//Валидация форм
