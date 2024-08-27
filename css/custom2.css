@@ -637,7 +637,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            bottom: -92px;
+            bottom: -73px;
             left: -40px;
             cursor: pointer;
         }
@@ -705,6 +705,8 @@ header {
         .collections__sort_item {
             margin-right: 50px;
             position: relative;
+            display: flex;
+            text-decoration: none;
         }
 
             .collections__sort_item span {
@@ -3089,8 +3091,6 @@ header {
             max-width: 20%;
             margin-left: 20px;
             margin-right: 0;
-            display: flex;
-            text-decoration: none;
         }
 
         .collections__sort_item:first-child {
