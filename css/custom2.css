@@ -709,6 +709,10 @@ header {
             text-decoration: none;
         }
 
+        .collections__sort_item.active span {
+            color: #000000
+        }
+
             .collections__sort_item span {
                 color: #8C8C8C;
                 display: inline-block;
@@ -747,8 +751,9 @@ header {
                     transform: rotate(180deg);
                 }
 
-
-
+                .collections__sort_item.active:after {
+                    background-image: url(../img/arrow_black.svg);
+                }
 
 .row {
     margin-left: -10px; 
@@ -1229,6 +1234,10 @@ header {
     padding: 60px 20px;
 }
 
+.form_wrap_no-padding {
+    padding: 70px 20px 90px;
+}
+
 .form_wrap.form__add_wrap {
     padding: 50px 0 0 0 ;
 }
@@ -1302,6 +1311,10 @@ header {
     .form_short-text_margin,
     .form_short-text_margin span {
         margin-bottom: 20px;
+    }
+
+    .form_short-text_margin_l {
+        margin-bottom:  15px;
     }
 
     .form_short-text_left {
@@ -1536,6 +1549,11 @@ header {
     .form_section_margin_medium_second {
         margin-bottom: 65px;
     }
+
+    .form_section_margin_medium_third {
+        margin-bottom: 45px;
+    }
+    
 
     .form_section_margin_big {
         margin-bottom: 80px;
@@ -2006,7 +2024,7 @@ header {
             text-align: center;
             color: #000000;
             margin: 0 auto;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             max-width: 70%;
         }
 
@@ -2041,7 +2059,7 @@ header {
         }
 
         .subscription__tariffs_check {
-            min-height: 120px;
+            min-height: 122px;
             display: flex;
             justify-content: center;
             position: relative;
@@ -2053,7 +2071,7 @@ header {
             width: 15px;
             height: 2px;
             background-color: #000000;
-            bottom: 20px;
+            bottom: 30px;
         }
 
             .subscription__tariffs_item > div {
@@ -2099,7 +2117,7 @@ header {
                     line-height: 20px;
                     text-align: center;
                     color: #000000;
-                    margin-bottom: 40px;
+                    margin-bottom: 45px;
                 }
 
                 .subscription__tariffs_price {
@@ -2603,7 +2621,7 @@ header {
     margin-right:  10px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 12px;
+    background-size: 10px;
     transition: 0.3s linear;
 }
 
@@ -2984,7 +3002,7 @@ header {
 
     .rubric__subscription_wrap {
         background-color: #F1F1F1;
-        padding: 60px 20px;
+        padding: 60px 20px 30px;
     }
 
     .subscription__posts .b-col__1, .subscription__posts .b-col__2 {
