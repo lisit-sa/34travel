@@ -1492,6 +1492,7 @@ header {
             margin-right: 15px;
         }
 
+
     .form__label {
         text-align: left;
         margin: 0 0 15px;
@@ -1990,7 +1991,7 @@ header {
     }
 
     .rubric__subscription .container {
-        max-width: 920px;
+        max-width: 940px;
         margin: 0 auto;
         padding: 0;
         margin-bottom: 20px;
@@ -2058,12 +2059,24 @@ header {
             border: 3px solid #C9C9C9;
         }
 
-        .subscription__tariffs_check {
+        .subscription__tariff_title {
             min-height: 122px;
+        }
+
+        .subscription__tariffs_check {
+            min-height: 100px;
             display: flex;
             justify-content: center;
             position: relative;
         }
+
+        /* .subscription__tariffs_line {
+            width: 15px;
+            height: 2px;
+            background-color: #000000;
+            margin: 0 auto;
+            display: block;
+        } */
 
         .subscription__tariffs_check::after {
             content: '';
@@ -2071,7 +2084,7 @@ header {
             width: 15px;
             height: 2px;
             background-color: #000000;
-            bottom: 30px;
+            bottom: 0;
         }
 
             .subscription__tariffs_item > div {
@@ -2365,14 +2378,6 @@ header {
 
             .subscription__payment_item:last-child {
                 margin-right: 0;
-            }
-
-            .subscription__payment_item svg {
-                -webkit-filter: grayscale(100%);
-                -moz-filter: grayscale(100%);
-                -ms-filter: grayscale(100%);
-                -o-filter: grayscale(100%);
-                filter: grayscale(100%);
             }
 
     .subscription__promo {
