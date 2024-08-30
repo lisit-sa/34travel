@@ -465,6 +465,10 @@ header {
     padding: 30px 20px;
 }
 
+.header__mobile_dark_big {
+    padding: 35px 20px;
+}
+
 .header__mobile_light {
     padding: 30px 20px;
 }
@@ -480,13 +484,42 @@ header {
 
     .menu-open .header__link {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         display: block;
     }
     
     .menu-open .header__account_icon {
-        margin: 0 auto 20px;
+        margin: 0 auto 5px;
         text-align: center;
+    }
+
+    .menu-open .header__account_item {
+        margin-bottom: 15px;
+    }
+
+    .menu-open .header__mobile_dark {
+        margin-bottom: 37px;
+        margin-left: -10px;
+        margin-right: -10px;
+        position: relative;
+    }
+
+    .menu-open .header__account_list:after {
+        content:'';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #C0C0C0;
+        left: 0;
+        bottom: 85px;
+    }
+
+    .menu-open .header__account_link {
+        max-width: 100px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        display: flex !important;
+        border: 1px solid #000000;
     }
 
     .menu-open .header__links {
@@ -507,12 +540,29 @@ header {
     .menu-open .header__projects_header {
         color: #BDBDBD;
         cursor: auto;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .menu-open .header__projects_wrap {
         margin-right: 0;
+        width: 95%;
         justify-content: space-between;
+    }
+
+    .menu-open .header__projects_link, .menu-open .header__social_open {
+        gap: 15px;
+    }
+
+    .menu-open header .logo {
+        width: 65px !important;
+        height: 60px !important;
+        margin-bottom: 10px;
+        margin-right: 15px;
+    }
+
+    .menu-open .header__mobile_light {
+        padding-top: 0;
+        padding-bottom: 10px;
     }
 
     .menu-open .header__projects_link {
@@ -520,8 +570,12 @@ header {
     }
 
     .menu-open .header__buy-subscribtion {
-        margin-top: 40px;
         margin-bottom: 0 !important;
+    }
+
+    .menu-open .header__account_list {
+        border: none;
+        margin-bottom: 50px;
     }
 
     .menu-open .header__social_list {
