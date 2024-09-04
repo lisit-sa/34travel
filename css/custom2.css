@@ -671,9 +671,9 @@ header {
         fill: black;
     }
 
-.post-body .wide-box *:last-child {
+/* .post-body .wide-box *:last-child {
     position: relative;
-}
+} */
 
 .post-meta__faves_wrap {
     max-width: 60vw;
@@ -861,11 +861,13 @@ header {
 
             .collections__item_img {
                 width: 100%;
-                margin-bottom: 22px !important;
+                border: 1px solid #000;
+                border-bottom: 0;
+                margin-bottom: 12px !important;
             }
 
             .one-collection__item_img {
-                margin-bottom: 4px !important;
+                margin-bottom: 0 !important;
             }
 
             .collections__item img {
@@ -962,7 +964,8 @@ header {
             width: 100%;
             object-fit: cover;
             margin-top: 0 !important;
-            aspect-ratio: 4 / 2.7;
+            aspect-ratio: 4 / 2.65;
+            min-height: 186px;
         }
 
         .faves__item_top {

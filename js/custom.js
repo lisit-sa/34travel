@@ -105,6 +105,18 @@ $(document).ready(function() {
 		
 	});
 
+	const modalClose = $('#form_add_post_view').find('.mfp-close');
+
+	modalClose.on('click', function() {
+		$('#choose_post_collection').children('option').each(function () {
+			if(!$(this).attr('disabled')) {
+				$(this).attr("selected", false)
+			} else {
+				$(this).attr('selected', 'selected');
+			}
+		});
+	})
+
 	//Валидация форм
 	$(".form").each(function() {
 		$(this).validate({
