@@ -29,7 +29,7 @@ $(document).ready(function() {
 			selectOption = _this.find('option'),
 			selectOptionLength = selectOption.length,
 			selectedOption = selectOption.filter(':selected'),
-			duration = 450; // длительность анимации 
+			duration = 450; 
 
 		_this.hide();
 		_this.wrap('<div class="select"></div>');
@@ -58,23 +58,29 @@ $(document).ready(function() {
 				.attr('data-value', selectOption.eq(i).val())
 				.appendTo(selectList);
 			}
-		} else {
-			selectHead.addClass('empty')
-		}
-
-		const createCollection = $('#form_add_post_view .popup-with-form');
-		createCollection.on('click', function() {
-			const inputVal =  $('#addCollectionInput').val();
 			$('<div>', {
 				class: 'new-select__item',
 				html: $('<span>', {
-					text: inputVal
+					text: '... без коллекции'
 				})
 			})
-			.attr('data-value', inputVal)
-			.appendTo(selectList);
-		})
+			.prependTo(selectList);
 
+		} else if (selectOptionLength == 1) {
+			selectHead.addClass('empty');
+			$('<div>', {
+				class: 'new-select__item',
+				html: $('<span>', {
+					text: '... без коллекции'
+				})
+			})
+			.appendTo(selectList);
+		}
+
+		const createCollection = $('#form__create');
+		$(createCollection).on('submit',function(event) {
+			event.preventDefault();
+		});
 
 		const selectItem = selectList.find('.new-select__item');
 		selectList.slideUp(0);
@@ -104,18 +110,6 @@ $(document).ready(function() {
 
 		
 	});
-
-	const modalClose = $('#form_add_post_view').find('.mfp-close');
-
-	modalClose.on('click', function() {
-		$('#choose_post_collection').children('option').each(function () {
-			if(!$(this).attr('disabled')) {
-				$(this).attr("selected", false)
-			} else {
-				$(this).attr('selected', 'selected');
-			}
-		});
-	})
 
 	//Валидация форм
 	$(".form").each(function() {

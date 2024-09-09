@@ -861,9 +861,12 @@ header {
 
             .collections__item_img {
                 width: 100%;
+                margin-bottom: 12px !important;
+            }
+
+            .collections__item  .collections__item_img {
                 border: 1px solid #000;
                 border-bottom: 0;
-                margin-bottom: 12px !important;
             }
 
             .one-collection__item_img {
@@ -1844,7 +1847,7 @@ header {
                     }
 
                     .favoritesPage .new-select {
-                        width: 100%;
+                        width: calc(100% - 2px);
                     }
 
                     .new-select.empty {
@@ -2038,28 +2041,28 @@ header {
 }
 
     .rubric__subscription_blur {
-        height: 340px;
+        /* height: 340px;
         width: 100%;
         margin-top: -340px;
         display: block;
         background: rgb(226,226,226);
-        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
-      
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%); */
+        padding-top: 50px;
     }
 
-    .rubric__subscription_blur span {
+    /* .rubric__subscription_blur span {
         height: 340px;
         width: 100%;
         display: block;
         backdrop-filter: blur(1px);
         background: linear-gradient(180deg, rgba(255,255,255,0) 10%, rgba(226,226,226,1) 100%);
-    }
+    } */
 
     .rubric__subscription .container {
         max-width: 940px;
         margin: 0 auto;
         padding: 0;
-        margin-bottom: 20px;
+        margin-bottom: 0;
         padding-bottom: 50px;
     }
 
